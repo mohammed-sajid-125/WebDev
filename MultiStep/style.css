@@ -179,6 +179,10 @@ input:checked + .slider:before {
     display: flex;
     justify-content: space-between;
   }
+.label1{
+    color:#02295a
+}
+
   
   .back {
     background: none;
