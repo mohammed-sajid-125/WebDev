@@ -1,0 +1,44 @@
+/* HeartBeatLine.css */
+.ecg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Keep it behind content */
+}
+
+.ecg-line {
+  width: 100%;
+  height: 100%;
+}
+
+.pulse-path {
+  stroke: rgba(41, 41, 41, 0.7);
+  stroke-width: 2;
+  fill: none;
+  animation: dash 2s linear infinite;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 0, 1000;
+  }
+  100% {
+    stroke-dasharray: 1000, 0;
+  }
+}
+
+.ecg-container-in-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+  z-index: 0;
+  overflow: hidden;
+}

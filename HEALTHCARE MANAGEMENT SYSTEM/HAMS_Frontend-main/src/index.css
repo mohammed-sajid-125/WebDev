@@ -1,0 +1,62 @@
+/* Tailwind CSS is the primary styling method for responsiveness. */
+@import "tailwindcss";
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Edge */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.glowing-border {
+  border-radius: 1rem;
+  box-shadow:
+    0 0 10px rgba(224, 227, 234, 0.6),
+    0 0 20px rgba(0, 55, 255, 0.4),
+    0 0 30px rgba(0, 153, 255, 0.2);
+  animation: borderGlowPulse 2s ease-in-out infinite;
+}
+
+@keyframes borderGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(198, 202, 206, 0.4),
+      0 0 16px rgba(0, 153, 255, 0.3),
+      0 0 24px rgba(0, 153, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(225, 226, 231, 0.454),
+      0 0 24px rgba(0, 153, 255, 0.5),
+      0 0 34px rgba(0, 153, 255, 0.4);
+  }
+}
+
+
+.heartbeat-text {
+  animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.05);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+
+
